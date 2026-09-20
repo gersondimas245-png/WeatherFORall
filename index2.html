@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>World Weather</title>
+
+    <link
+        rel="stylesheet"
+        href="style2.css"
+    >
+</head>
+
+<body>
+
+    <div class="app">
+
+        <header>
+
+            <div>
+                <h1>World Weather</h1>
+                <p>Search weather for cities around the world</p>
+            </div>
+
+            <button
+                id="themeButton"
+                class="theme-button"
+            >
+                🌙
+            </button>
+
+        </header>
+
+
+        <!-- SEARCH AREA -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    autocomplete="off"
+                >
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+            <div
+                id="searchResults"
+                class="search-results"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGE -->
+
+        <div
+            id="message"
+            class="message"
+        >
+            Search for a city to see the weather.
+        </div>
+
+
+        <!-- WEATHER CONTENT -->
+
+        <main
+            id="weatherContent"
+            class="weather-content hidden"
+        >
+
+            <!-- CURRENT WEATHER -->
+
+            <section class="current-weather">
+
+                <div class="city-information">
+
+                    <p class="small-title">
+                        CURRENT WEATHER
+                    </p>
+
+                    <h2 id="cityName">
+                        City
+                    </h2>
+
+                    <p id="locationText">
+                        Country
+                    </p>
+
+                    <p id="currentTime">
+                        Local time
+                    </p>
+
+                </div>
+
+
+                <div class="current-main">
+
+                    <div
+                        id="weatherIcon"
+                        class="weather-icon"
+                    >
+                        ☀️
+                    </div>
+
+                    <div>
+
+                        <div class="temperature">
+
+                            <span id="temperature">
+                                0
+                            </span>
+
+                            <span>°C</span>
+
+                        </div>
+
+                        <p
+                            id="weatherDescription"
+                            class="weather-description"
+                        >
+                            Clear
+                        </p>
+
+                        <p class="feels-like">
+
+                            Feels like
+
+                            <span id="feelsLike">
+                                0
+                            </span>
+
+                            °C
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- WEATHER DETAILS -->
+
+            <section class="details-grid">
+
+                <div class="detail-card">
+                    <span class="detail-icon">
+                        💧
+                    </span>
+
+                    <div>
+                        <p>Humidity</p>
+
+                        <strong id="humidity">
+                            0%
+                        </strong>
+                    </div>
+                </div>
+
+
+                <div class="detail-card">
+                    <span class="detail-icon">
+                        💨
+                    </span>
+
+                    <div>
+                        <p>Wind speed</p>
+
+                        <strong id="windSpeed">
+                            0 km/h
+                        </strong>
+                    </div>
+                </div>
+
+
+                <div class="detail-card">
+                    <span class="detail-icon">
+                        🌧️
+                    </span>
+
+                    <div>
+                        <p>Precipitation</p>
+
+                        <strong id="precipitation">
+                            0 mm
+                        </strong>
+                    </div>
+                </div>
+
+
+                <div class="detail-card">
+                    <span class="detail-icon">
+                        🧭
+                    </span>
+
+                    <div>
+                        <p>Wind direction</p>
+
+                        <strong id="windDirection">
+                            0°
+                        </strong>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- HOURLY FORECAST -->
+
+            <section class="forecast-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        Today's Forecast
+                    </h2>
+
+                </div>
+
+                <div
+                    id="hourlyForecast"
+                    class="hourly-forecast"
+                >
+                </div>
+
+            </section>
+
+
+            <!-- WEEK FORECAST -->
+
+            <section class="forecast-section">
+
+                <div class="section-header">
+
+                    <h2>
+                        7-Day Forecast
+                    </h2>
+
+                </div>
+
+                <div
+                    id="dailyForecast"
+                    class="daily-forecast"
+                >
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <footer>
+
+        Weather data powered by Open-Meteo
+
+    </footer>
+
+
+    <script src="script2.js"></script>
+
+</body>
+</html>
